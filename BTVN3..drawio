@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram name="RikkeiLogistics - Dat xe" id="0">
+    <mxGraphModel dx="1290" dy="873" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=center" value="SEQUENCE DIAGRAM – CHỨC NĂNG ĐẶT XE RIKKEILOGISTICS" vertex="1">
+          <mxGeometry height="40" width="700" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1" value="Khách hàng" vertex="1">
+          <mxGeometry height="80" width="70" x="90" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" value="App Điều Phối" vertex="1">
+          <mxGeometry height="40" width="140" x="390" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="driver" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" value="Điện thoại Tài xế" vertex="1">
+          <mxGeometry height="40" width="150" x="760" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="trip" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" value="Chuyến Đi (Trip)" vertex="1">
+          <mxGeometry height="40" width="150" x="1110" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="la" parent="1" style="dashed=1;strokeWidth=1;strokeColor=#888888" vertex="1">
+          <mxGeometry height="600" width="1" x="125" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lap" parent="1" style="dashed=1;strokeWidth=1;strokeColor=#888888" vertex="1">
+          <mxGeometry height="650" width="1" x="460" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ld" parent="1" style="dashed=1;strokeWidth=1;strokeColor=#888888" vertex="1">
+          <mxGeometry height="650" width="1" x="835" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1" value="1. taoDonHang()  [Sync]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="126" y="230" as="sourcePoint" />
+            <mxPoint x="460" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0" value="2. Yêu cầu nhận đơn  [Async]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="290" as="sourcePoint" />
+            <mxPoint x="835" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0" value="3. Đồng ý / Từ chối">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="835" y="350" as="sourcePoint" />
+            <mxPoint x="460" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alt" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=5;fontStyle=1;dashed=0" value="alt" vertex="1">
+          <mxGeometry height="280" width="1000" x="330" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="guard1" parent="1" style="text;html=1;fontStyle=1" value="[Tài xế đồng ý]" vertex="1">
+          <mxGeometry height="30" width="180" x="350" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="createTrip" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;dashed=0" value="4A. Create Trip">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="485" as="sourcePoint" />
+            <mxPoint x="1110" y="485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tripLife" parent="1" style="dashed=1;strokeWidth=1;strokeColor=#888888" vertex="1">
+          <mxGeometry height="95" width="1" x="1185" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="else" parent="1" style="line;strokeWidth=1" value="else" vertex="1">
+          <mxGeometry height="1" width="1000" x="330" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="guard2" parent="1" style="text;html=1;fontStyle=1" value="[Tài xế từ chối]" vertex="1">
+          <mxGeometry height="30" width="180" x="350" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="noTrip" parent="1" style="text;html=1" value="Không tạo Trip" vertex="1">
+          <mxGeometry height="30" width="180" x="600" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0" value="5. Kết quả cuối cùng">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="735" as="sourcePoint" />
+            <mxPoint x="126" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="result" parent="1" style="text;html=1" value="“Đã tìm thấy xe” / “Không tìm được tài xế”" vertex="1">
+          <mxGeometry height="45" width="300" x="170" y="750" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
